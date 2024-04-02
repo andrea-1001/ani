@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album de fotos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styless.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <audio id="musica-fondo" autoplay loop>
+        <source src="Que Pase El Mundo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>    
+
+<div id="tarjeta">
+    <i class="fa-solid fa-heart" style="color: rgb(230, 129, 219); margin-bottom: 10px;"></i>
+    <h1> Para cuando sobrepienses </h1>
+    <div id="contenedor-multimedia"></div>
+    <button id="boton" onclick="mostrarMultimediaAleatoria()"> Te sobreexplicare <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+    <button id="inicio">Inicio</button>
+    <div id="notificacion" class="notificacion"></div>
+</div>
+
+<script>
+function mostrarMultimediaAleatoria() {
+    var multimedia = [
+        { src: "2.jpg", tipo: "imagen" },
+        { src: "1.mp4", tipo: "video" },
+        { src: "59167961673_status_4e6432b00e6942e9b222603afa0c6fc0.jpg", tipo: "imagen" },
+        { src: "3.jpg", tipo: "imagen" },
+        { src: "4.jpg", tipo: "imagen" },
+        { src: "5.jpg", tipo: "imagen" },
+        { "src": "6.jpg", "tipo": "imagen" },
+        { "src": "7.webp", "tipo": "imagen" },
+        { "src": "8.webp", "tipo": "imagen" },
+        { "src": "9.webp", "tipo": "imagen" },
+        { "src": "10.webp", "tipo": "imagen" },
+        { "src": "11.webp", "tipo": "imagen" },
+        { "src": "12.webp", "tipo": "imagen" },
+        { "src": "13.webp", "tipo": "imagen" },
+        { "src": "14.webp", "tipo": "imagen" },
+        { "src": "15.webp", "tipo": "imagen" },
+        { "src": "16.jpg", "tipo": "imagen" },
+        { "src": "17.jpg", "tipo": "imagen" },
+        { "src": "18.jpg", "tipo": "imagen" },
+        { "src": "19.jpg", "tipo": "imagen" },
+        { "src": "20.jpg", "tipo": "imagen" },
+        { "src": "21.jpg", "tipo": "imagen" },
+        { "src": "22.jpg", "tipo": "imagen" },
+        { "src": "23.jpg", "tipo": "imagen" },
+        { "src": "24.jpg", "tipo": "imagen" },
+        { "src": "25.jpg", "tipo": "imagen" },
+        { "src": "26.jpg", "tipo": "imagen" },
+        { "src": "27.jpg", "tipo": "imagen" },
+        { "src": "28.jpg", "tipo": "imagen" },
+        { "src": "29.jpg", "tipo": "imagen" },
+        { "src": "30.jpg", "tipo": "imagen" },
+        { "src": "31.jpg", "tipo": "imagen" },
+        { "src": "32.jpg", "tipo": "imagen" },
+        { "src": "33.jpg", "tipo": "imagen" },
+        { "src": "34.jpg", "tipo": "imagen" },
+        { "src": "35.jpg", "tipo": "imagen" },
+        { "src": "36.jpg", "tipo": "imagen" },
+        { "src": "37.jpg", "tipo": "imagen" },
+        { "src": "38.jpg", "tipo": "imagen" },
+        { "src": "39.jpg", "tipo": "imagen" },
+        { "src": "40.jpg", "tipo": "imagen" },
+        { "src": "41.jpg", "tipo": "imagen" },
+        { "src": "42.jpg", "tipo": "imagen" },
+        { "src": "43.jpg", "tipo": "imagen" },
+        { "src": "44.jpg", "tipo": "imagen" },
+        { "src": "45.jpg", "tipo": "imagen" },
+        { "src": "46.jpg", "tipo": "imagen" },
+        { "src": "47.jpg", "tipo": "imagen" },
+        { "src": "48.jpg", "tipo": "imagen" },
+        { "src": "49.jpg", "tipo": "imagen" },
+        { "src": "50.jpg", "tipo": "imagen" },
+        { "src": "51.jpg", "tipo": "imagen" },
+        { "src": "52.jpg", "tipo": "imagen" },
+        { "src": "53.jpg", "tipo": "imagen" },
+        { "src": "54.jpg", "tipo": "imagen" },
+        { "src": "55.jpg", "tipo": "imagen" },
+        { "src": "56.jpg", "tipo": "imagen" },
+        { "src": "57.jpg", "tipo": "imagen" },
+        { "src": "58.jpg", "tipo": "imagen" },
+        { "src": "59.jpg", "tipo": "imagen" },
+        { "src": "60.jpg", "tipo": "imagen" },
+        { "src": "61.jpg", "tipo": "imagen" },
+        { "src": "62.jpg", "tipo": "imagen" },
+        { "src": "63.jpg", "tipo": "imagen" },
+        { "src": "64.jpg", "tipo": "imagen" },
+        { "src": "65.jpg", "tipo": "imagen" },
+        { "src": "66.jpg", "tipo": "imagen" },
+        { "src": "67.jpg", "tipo": "imagen" },
+        { "src": "68.jpg", "tipo": "imagen" },
+        { "src": "69.jpg", "tipo": "imagen" },
+        { "src": "70.jpg", "tipo": "imagen" },
+        { "src": "71.jpg", "tipo": "imagen" },
+        { "src": "72.jpg", "tipo": "imagen" },
+        { "src": "73.jpg", "tipo": "imagen" },
+        { "src": "74.jpg", "tipo": "imagen" },
+        { "src": "75.jpg", "tipo": "imagen" },
+        { "src": "76.jpg", "tipo": "imagen" },
+        { "src": "77.jpg", "tipo": "imagen" },
+        { "src": "78.jpg", "tipo": "imagen" },
+        { "src": "79.jpg", "tipo": "imagen" },
+        { "src": "80.jpg", "tipo": "imagen" },
+        { "src": "81.jpg", "tipo": "imagen" },
+        { "src": "82.jpg", "tipo": "imagen" },
+        { "src": "83.jpg", "tipo": "imagen" },
+        { "src": "84.jpg", "tipo": "imagen" },
+        { "src": "85.jpg", "tipo": "imagen" },
+        { "src": "86.jpg", "tipo": "imagen" },
+        { "src": "87.jpg", "tipo": "imagen" },
+        { "src": "88.jpg", "tipo": "imagen" },
+        { "src": "89.jpg", "tipo": "imagen" },
+        { "src": "90.jpg", "tipo": "imagen" },
+        { "src": "91.jpg", "tipo": "imagen" },
+        { "src": "92.jpg", "tipo": "imagen" },
+        { "src": "93.jpg", "tipo": "imagen" },
+        { "src": "94.jpg", "tipo": "imagen" },
+        { "src": "95.jpg", "tipo": "imagen" },
+        { "src": "96.jpg", "tipo": "imagen" },
+        { "src": "97.jpg", "tipo": "imagen" },
+        { "src": "98.jpg", "tipo": "imagen" },
+        { "src": "99.jpg", "tipo": "imagen" },
+        { "src": "100.jpg", "tipo": "imagen" },
+        { "src": "101.jpg", "tipo": "imagen" },
+        { "src": "102.jpg", "tipo": "imagen" },
+        { "src": "103.jpg", "tipo": "imagen" },
+        { "src": "104.jpg", "tipo": "imagen" },
+        { "src": "105.jpg", "tipo": "imagen" },
+        { "src": "106.jpg", "tipo": "imagen" },
+        { "src": "107.jpg", "tipo": "imagen" },
+        { "src": "108.jpg", "tipo": "imagen" },
+        { "src": "109.jpg", "tipo": "imagen" },
+        { "src": "110.jpg", "tipo": "imagen" },
+        { "src": "111.jpg", "tipo": "imagen" },
+        { "src": "112.jpg", "tipo": "imagen" },
+        { "src": "113.jpg", "tipo": "imagen" },
+        { "src": "114.jpg", "tipo": "imagen" },
+        { "src": "115.jpg", "tipo": "imagen" },
+        { "src": "116.jpg", "tipo": "imagen" }
+
+
+
+        
+        // Agrega aquí las rutas y tipos de las demás imágenes y videos
+    ];
+
+    var elementoAleatorio = multimedia[Math.floor(Math.random() * multimedia.length)];
+    var contenedor = document.getElementById("contenedor-multimedia");
+
+    if (elementoAleatorio.tipo === "imagen") {
+        contenedor.innerHTML = `<img src="${elementoAleatorio.src}" alt="Imagen o video aleatorio" style="max-width: 100%;">`;
+    } else if (elementoAleatorio.tipo === "video") {
+        contenedor.innerHTML = `<video controls style="max-width: 100%;"><source src="${elementoAleatorio.src}" type="video/mp4"></video>`;
+    }
+}
+
+function mostrarNotificacion(mensaje) {
+    var notificacion = document.getElementById("notificacion");
+    notificacion.innerHTML = `<i class="fas fa-heart-pulse"></i> ${mensaje}`;
+    notificacion.classList.add("mostrar");
+
+    setTimeout(function() {
+        notificacion.classList.remove("mostrar");
+    }, 1000);
+}
+
+// Obtén el botón por su ID
+var inicioButton = document.getElementById("inicio");
+inicioButton.addEventListener("click", function() {
+    // Redirige a la página deseada (cambia "tu_pagina.html" por la URL de la página a la que quieres redirigir)
+    window.location.href = "index.html";
+});
+</script>
+
+<!-- Sofi TE AMO MI AMOR ❤ -->
+<!-- Sofi TE AMO MI AMOR ❤ -->
+<!-- ... -->
+
+</body>
+</html>
